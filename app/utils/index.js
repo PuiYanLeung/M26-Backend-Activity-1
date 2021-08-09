@@ -18,13 +18,18 @@ exports.list = () => {
 
 exports.update = (movieListArr, input, value) => {
     let newArr = movieListArr.map(movie => (movie.movie) === input ? {movie: value} : movie)
-    save(newArr);
+    if (newArr.length >= 0){
+        save(newArr);
+    }
+        
 }
 
 
 exports.deleteMovie = (movieListArr, input) => {
     let newArr = movieListArr.filter((movie) => (movie.movie) !== input);
-    save(newArr);
+    if (newArr.length >= 0){
+        save(newArr);
+    }
 }
 
 
