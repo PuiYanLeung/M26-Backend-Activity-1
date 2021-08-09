@@ -17,11 +17,10 @@ exports.list = () => {
 }
 
 exports.update = (movieListArr, input, value) => {
-    let newArr = movieListArr.map(movie => (movie.movie) === input ? {movie: value} : movie)
+    let newArr = movieListArr.map(movie => (movie.movie) === input ? {movie: value} : movie);
     if (newArr.length >= 0){
         save(newArr);
-    }
-        
+    }        
 }
 
 
